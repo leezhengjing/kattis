@@ -1,0 +1,15 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# Common build artifacts
+*.o
+*.obj
+*.out
+*.exe
+a.out
+
+# IDE/editor files
+.idea/
+.vscode/
+*.swp
