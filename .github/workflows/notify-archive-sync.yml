@@ -1,0 +1,24 @@
+name: Notify Archive Sync
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  repository-dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send repository dispatch
+        env:
+          ARCHIVE_REPO_TOKEN: ${{ secrets.ARCHIVE_REPO_TOKEN }}
+        run: |
+          curl --fail --silent --show-error \
+            -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${ARCHIVE_REPO_TOKEN}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/leezhengjing/everyquestionidid/dispatches \
+            -d '{"event_type":"kattis_updated"}'
