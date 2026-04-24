@@ -6,10 +6,10 @@ The folder layout intentionally follows my course progression and workflow based
 
 ## Repository Structure
 
-- `week0` to `week13`: Weekly practice and submissions.
+- `weekX` directories (e.g., `week0` to `week13`): Weekly CS3233 problem sets and submissions.
 - `midterm2425`, `midterm2526`: Midterm preparation/submissions by academic year.
 - `finals2425`, `finals2526`: Finals preparation/submissions by academic year.
-- `methodstosolve`: Pattern-based practice and reference implementations grouped by topic/chapter.
+- `methodstosolve`: Solutions organized by the "Methods to Solve" question list (Steven Halim's approach), grouped by chapter/topic.
 
 Most problems include:
 
